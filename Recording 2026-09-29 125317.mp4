@@ -1,0 +1,9 @@
+declare
+eno number;
+
+begin
+	eno:=&eno;
+	emp12(eno);
+end;
+
+	

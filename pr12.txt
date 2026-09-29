@@ -1,0 +1,9 @@
+CREATE OR REPLACE PROCEDURE emp12(eno number)
+IS
+	enm varchar2(20);
+	sal number;
+BEGIN
+	SELECT ename,salary INTO enm,sal FROM emp WHERE empno=eno;
+	DBMS_OUTPUT.PUT_LINE('ename    :'||enm);
+	DBMS_OUTPUT.PUT_LINE('salary     :'||sal);
+END;
