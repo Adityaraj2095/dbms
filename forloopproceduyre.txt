@@ -1,0 +1,11 @@
+CREATE OR REPLACE PROCEDURE ad(eno NUMBER)
+IS
+BEGIN
+    FOR row IN (SELECT ename, city
+                FROM emp
+                WHERE deptno = eno)
+    LOOP
+        DBMS_OUTPUT.PUT_LINE(row.city || ' ' || row.ename);
+    END LOOP;
+END;
+/
